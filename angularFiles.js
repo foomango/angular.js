@@ -204,6 +204,23 @@ var angularFiles = {
     'src/angular.bind.js'
   ],
 
+  'debug': [
+      'bower_components/jquery/dist/jquery.js',
+      'test/jquery_remove.js',
+      '@angularSrc',
+      '@angularSrcModules',
+      '@angularScenario',
+      'test/helpers/*.js',
+      'test/loaderSpec.js'
+  ],
+
+    'debugExclude': [
+        'test/jquery_alias.js',
+        'src/angular-bootstrap.js',
+        'src/ngScenario/angular-bootstrap.js',
+        'src/angular.bind.js'
+    ],
+
   'karmaScenario': [
     'build/angular-scenario.js',
     'build/docs/docs-scenario.js'

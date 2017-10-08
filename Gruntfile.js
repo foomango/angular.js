@@ -134,6 +134,7 @@ module.exports = function(grunt) {
 
 
     tests: {
+        debug: 'karma-debug.conf.js',
       jqlite: 'karma-jqlite.conf.js',
       jquery: 'karma-jquery.conf.js',
       'jquery-2.2': 'karma-jquery-2.2.conf.js',
@@ -144,6 +145,7 @@ module.exports = function(grunt) {
 
 
     autotest: {
+        debug: 'karma-debug.conf.js',
       jqlite: 'karma-jqlite.conf.js',
       jquery: 'karma-jquery.conf.js',
       'jquery-2.2': 'karma-jquery-2.2.conf.js',
@@ -402,6 +404,7 @@ module.exports = function(grunt) {
     'tests:docs',
     'test:protractor'
   ]);
+    grunt.registerTask('test:debug', 'Run the unit tests with Karma' , ['tests:debug']);
   grunt.registerTask('test:jqlite', 'Run the unit tests with Karma' , ['tests:jqlite']);
   grunt.registerTask('test:jquery', 'Run the jQuery (latest) unit tests with Karma', ['tests:jquery']);
   grunt.registerTask('test:jquery-2.2', 'Run the jQuery 2.2 unit tests with Karma', ['tests:jquery-2.2']);
